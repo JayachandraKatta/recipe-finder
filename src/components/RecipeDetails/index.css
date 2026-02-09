@@ -1,0 +1,185 @@
+/* PAGE */
+.details-page {
+  background: #fff7eb;
+  min-height: 100vh;
+  padding: 30px 0 60px;
+}
+
+/* BACK LINK */
+.back-link {
+  max-width: 1000px;
+  margin: 0 auto 16px;
+  color: #c2410c;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+/* TOP CARD */
+.top-card {
+  max-width: 1000px;
+  margin: 0 auto 40px;
+  background: #fff;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.08);
+}
+
+.top-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.top-info {
+  padding: 32px;
+}
+
+.top-info h1 {
+  margin-bottom: 14px;
+}
+
+/* TAGS */
+.tags {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.tag {
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.tag.category {
+  background: #ffe3c2;
+  color: #b45309;
+}
+
+.tag.area {
+  background: #e0edff;
+  color: #1e40af;
+}
+
+/* META */
+.meta {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 22px;
+  color: #555;
+}
+
+/* VIDEO BUTTON */
+.video-btn {
+  display: inline-block;
+  background: #e11d48;
+  color: white;
+  padding: 12px 18px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.video-btn:hover {
+  background: #be123c;
+}
+
+/* BOTTOM SECTION */
+.bottom-section {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 26px;
+  align-items: flex-start;
+}
+
+/* INGREDIENTS */
+.ingredients-card {
+  background: #fff;
+  padding: 22px;
+  border-radius: 14px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
+}
+
+.ingredients-card h2 {
+  margin-bottom: 16px;
+}
+
+.ingredient-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.measure {
+  color: #b45309;
+  font-weight: 500;
+}
+
+/* INSTRUCTIONS */
+.instructions-card {
+  background: #fff;
+  padding: 26px;
+  border-radius: 14px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
+}
+
+.instructions-card h2 {
+  margin-bottom: 18px;
+}
+
+.instruction-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px; /* was 14px */
+}
+
+.instruction-step {
+  background: #f8fafc;
+  padding: 10px 12px; /* reduced padding */
+  border-radius: 10px;
+  line-height: 1.5; /* slightly tighter */
+  color: #374151;
+}
+
+
+.instruction-step strong {
+  font-weight: 600;
+  color: #111827;
+}
+
+/* SOURCE LINK */
+.source-link {
+  display: inline-block;
+  margin-top: 18px;
+  color: #f59e0b;
+  font-weight: 500;
+  text-decoration: none;
+  max-width: 1000px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 26px;
+  align-items: flex-start;
+}
+
+.source-link:hover {
+  text-decoration: underline;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .top-card {
+    grid-template-columns: 1fr;
+  }
+
+  .bottom-section {
+    grid-template-columns: 1fr;
+  }
+}
+
+
