@@ -1,10 +1,10 @@
-import {Navigate} from 'react-router-dom'
+import { Navigate } from 'react-router-dom'
 
-const ProtectedRoute = ({children}) => {
+const ProtectedRoute = ({ children }) => {
   const isLoggedIn = localStorage.getItem('login')
 
   if (!isLoggedIn) {
-    return <Navigate to="/login" />
+    return <Navigate to="/login" replace />
   }
 
   return children
