@@ -1,25 +1,66 @@
+/* PAGE BACKGROUND */
 .login-bg {
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  background: linear-gradient(135deg, #fff7ed, #ffe4c7);
+  font-family: 'Segoe UI', sans-serif;
 }
 
+/* CARD */
 .login-card {
   background: white;
   padding: 40px;
   border-radius: 12px;
-  width: 300px;
+  width: 320px;
   text-align: center;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
 }
 
+/* LOGO */
+.logo {
+  font-size: 48px;
+  margin-bottom: 8px;
+}
+
+/* TITLE */
+.app-title {
+  font-size: 26px;
+  font-weight: bold;
+  color: #c2410c;
+  margin-bottom: 4px;
+}
+
+.tagline {
+  font-size: 13px;
+  color: #6b7280;
+  margin-bottom: 20px;
+}
+
+/* INPUT */
 .login-card input {
   width: 100%;
   padding: 12px;
-  margin: 10px 0;
+  margin-top: 6px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  outline: none;
 }
 
+.login-card input:focus {
+  border-color: #ff8c2b;
+}
+
+/* ERROR TEXT */
+.error {
+  color: red;
+  font-size: 12px;
+  text-align: left;
+  margin-top: 3px;
+}
+
+/* BUTTON */
 .login-card button {
   width: 100%;
   padding: 12px;
@@ -27,4 +68,34 @@
   color: white;
   border: none;
   border-radius: 6px;
+  margin-top: 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.login-card button:hover {
+  background: #ea580c;
+}
+
+/* INVALID USER */
+.invalid {
+  color: red;
+  margin-top: 10px;
+}
+
+.register-btn {
+  background: #2563eb;
+  margin-top: 8px;
+}
+
+.register-btn:hover {
+  background: #1d4ed8;
+}
+
+/* SWITCH LOGIN */
+.switch {
+  margin-top: 12px;
+  color: #2563eb;
+  cursor: pointer;
+  font-size: 14px;
 }

@@ -56,3 +56,16 @@
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 25px;
 }
+.logo-box {
+  cursor: pointer;
+  display: inline-block;
+}
+
+.logo-text {
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.logo-box:hover .logo-text {
+  transform: scale(1.06);
+  color: #ff8c2b;
+}

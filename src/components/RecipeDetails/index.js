@@ -31,7 +31,12 @@ const RecipeDetails = () => {
 
   return (
     <div className="details-page">
-      <p className="back-link" onClick={() => navigate(-1)}>
+
+      {/* ✅ FIXED BACK BUTTON */}
+      <p
+        className="back-link"
+        onClick={() => navigate(-1)}
+      >
         ← Back to results
       </p>
 
@@ -48,7 +53,9 @@ const RecipeDetails = () => {
 
           <div className="tags">
             <span className="tag category">{recipe.strCategory}</span>
-            <span className="tag area">{recipe.strArea} Cuisine</span>
+            <span className="tag area">
+              {recipe.strArea} Cuisine
+            </span>
           </div>
 
           <div className="meta">
@@ -69,6 +76,7 @@ const RecipeDetails = () => {
 
       {/* BOTTOM SECTION */}
       <div className="bottom-section">
+
         {/* INGREDIENTS */}
         <div className="ingredients-card">
           <h2>Ingredients</h2>
@@ -76,6 +84,7 @@ const RecipeDetails = () => {
           {Array.from({length: 20}).map((_, i) => {
             const ing = recipe[`strIngredient${i + 1}`]
             const measure = recipe[`strMeasure${i + 1}`]
+
             if (!ing) return null
 
             return (
@@ -112,20 +121,19 @@ const RecipeDetails = () => {
                 )
               })}
           </div>
-
-          
         </div>
       </div>
+
       {recipe.strSource && (
-            <a
-              href={recipe.strSource}
-              target="_blank"
-              rel="noreferrer"
-              className="source-link"
-            >
-              View Original Recipe Source →
-            </a>
-          )}
+        <a
+          href={recipe.strSource}
+          target="_blank"
+          rel="noreferrer"
+          className="source-link"
+        >
+          View Original Recipe Source →
+        </a>
+      )}
     </div>
   )
 }

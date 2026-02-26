@@ -1,9 +1,13 @@
-import Cookies from 'js-cookie'
 import {Navigate} from 'react-router-dom'
 
 const ProtectedRoute = ({children}) => {
-  const token = Cookies.get('jwt_token')
-  return token ? children : <Navigate to="/login" replace />
+  const isLoggedIn = localStorage.getItem('login')
+
+  if (!isLoggedIn) {
+    return <Navigate to="/login" />
+  }
+
+  return children
 }
 
 export default ProtectedRoute

@@ -9,6 +9,7 @@ const RecipeCard = ({recipe}) => {
       ? recipe.strInstructions.slice(0, 120) + '...'
       : recipe.strInstructions
 
+  // ✅ Navigate to Recipe Details Page
   const goToProductPage = () => {
     navigate(`/recipe/${recipe.idMeal}`)
   }
@@ -26,16 +27,23 @@ const RecipeCard = ({recipe}) => {
 
         <div className="tags">
           {recipe.strCategory && (
-            <span className="tag category">{recipe.strCategory}</span>
+            <span className="tag category">
+              {recipe.strCategory}
+            </span>
           )}
+
           {recipe.strArea && (
-            <span className="tag area">{recipe.strArea}</span>
+            <span className="tag area">
+              {recipe.strArea}
+            </span>
           )}
         </div>
 
         <p className="recipe-desc">{shortText}</p>
 
-        <p className="recipe-link">Click for full recipe →</p>
+        <p className="recipe-link">
+          Click for full recipe →
+        </p>
       </div>
     </div>
   )
